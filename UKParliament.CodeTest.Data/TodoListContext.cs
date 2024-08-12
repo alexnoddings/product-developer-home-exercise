@@ -15,7 +15,7 @@ namespace UKParliament.CodeTest.Data
             base.OnModelCreating(modelBuilder);
 
             // Use this method to seed the DB with Todo items, if desired, like so:
-            //modelBuilder.Entity<TodoItem>(new TodoItem {Id = 1, Title = "Do shopping"}).HasData();
+            modelBuilder.Entity<TodoItem>().HasData(new TodoItem { Id = 1});
         }
 
         public DbSet<TodoItem> TodoItems { get; set; }
