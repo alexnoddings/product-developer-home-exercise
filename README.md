@@ -6,58 +6,68 @@ Please ensure you have the following installed:
 
 ## Introduction
 
-Thanks for doing our recruitment home exercise. We have written a template solution for you, to save you from having to do too much setup.
+Thank you for taking part in our home exercise. We've provided a template solution to minimize setup and allow you to focus on the core task.
 
-* Clone this repository, and open the solution
-* Set **UKParliament.CodeTest.Web** as the startup project
-* Build and run it.
-* Instructions are including below with the assessment criteria for the test. **You should aim to satisfy all points on it.**
+### Getting Started
 
-A test code template has been provided to save time on setting up the code project, it includes:
+1. **Clone this repository** and open the solution in Visual Studio.
+2. **Set `UKParliament.CodeTest.WebApi` as the startup project.**
+3. **Build and run the solution.**
+4. Follow the instructions below and refer to the assessment criteria while completing the test.
 
-* WEB API Project: The beginning of an API - A Todo List API controller exists for you with a basic Swagger/OpenAPI documentation UI page.
-* Services project - To contain any services you might require.
-* Data project - Houses the in-memory database context with A todo entity. Todo items can be seeded into the DB on startup, if the relevant commented code line is uncommented.
-* Tests project - For writing Unit tests.
+The solution includes:
 
-## Submitting your test
-* After you have complete this test please host your solution on GitHub (or another git based hosting platform)
-* Provide us with a link so we can clone your solution
+- **Web API Project**: A basic Todo List API controller with Swagger/OpenAPI documentation.
+- **Services Project**: For housing any services you may require.
+- **Data Project**: Includes an in-memory database context and a `Todo` entity. You can seed initial data by uncommenting the relevant code.
+- **Tests Project**: For adding your unit tests.
+
+## Submitting Your Test
+
+1. Host your completed solution on GitHub (or another Git-based hosting platform).
+2. Provide us with a link to the repository so we can review your solution.
 
 ## Test Instructions
-### Objective
-Develop a small .NET Core Web API application to manage a simple to-do list. The application should allow users to perform CRUD (Create, Read, Update, Delete) operations on to-do items.
 
+### Objective
+
+### Objective
+
+The goal of this task is to develop the back-end component of a simple to-do list management application. You will build a .NET Core Web API that allows users to perform CRUD (Create, Read, Update, Delete) operations on to-do items. 
+
+This task is focused **exclusively on back-end development**. You do **not** need to implement any front-end or user interface. Instead, think of this Web API as a component that would power a web front-end or a mobile application in a real-world scenario. The API you build should be flexible, well-structured, and adhere to RESTful conventions, making it easy for a front-end developer to consume.
+
+Your responsibilities include designing and implementing the necessary API endpoints, creating the underlying services and data access layers, and writing unit tests to ensure the quality and reliability of your code. While the API should be designed with front-end integration in mind, **your task is solely to build the back-end logic**.
 
 ### Requirements
-Extend the ToDo Item entity in the data project, to include these properties:
 
-* Id (Guid or int)
-* Title (string, required, max length 100)
-* Description (string, optional, max length 500)
-* IsCompleted (bool)
-* DueDate (DateTime, optional)
-* (Any other properties that you would like to add)
+1. **Extend the `ToDo` Entity**:
+    - Add the following properties:
+      - `Id` (Guid or int)
+      - `Title` (string, required, max length 100)
+      - `Description` (string, optional, max length 500)
+      - `IsCompleted` (bool)
+      - `DueDate` (DateTime, optional)
+      - (Feel free to add any other properties you deem useful)
 
-Implement the following features on the API:
+2. **Implement API Features**:
+    - Create a new to-do item.
+    - Retrieve a list of all to-do items.
+    - Retrieve a single to-do item by ID.
+    - Update an existing to-do item.
+    - Delete a to-do item.
+    - Mark a to-do item as completed.
 
-* Create a new to-do item.
-* Retrieve a list of all to-do items.
-* Retrieve a single to-do item by ID.
-* Update an existing to-do item.
-* Delete a to-do item.
-* Mark a to-do item as completed.
+3. **Technical Requirements**:
+    - .NET Core 8 for the Web API.
+    - Entity Framework Core (EF Core) for data access. An in-memory database is pre-configured in the project.
+    - Follow RESTful API principles.
+    - Write unit tests for your controller and service classes.
+    - Implement basic error handling (e.g., handling not found items, validation errors).
+    - Use Dependency Injection (DI) to manage dependencies.
+    - Adhere to SOLID principles.
+    - Track your progress using Git, and ensure your final solution is hosted in a Git repository (e.g., GitHub).
 
-Technical Requirements:
-
-* .NET Core 8 for the Web API.
-* Entity Framework Core (EF Core) for data access. An in-memory database has already been setup in the project files.
-* RESTful API principles should be followed.
-* Unit Testing: Write unit tests for the Controller and Service classes.
-* Error Handling: Implement basic error handling (e.g., handling not found items, validation errors).
-* Dependency Injection (DI) should be used to manage dependencies.
-* SOLID principles should be adhered to.
-* Git: Use Git to track your progress. Provide a link to a Git repository (such as GitHub) containing your solution.
 
 ### Assessment criteria
 
