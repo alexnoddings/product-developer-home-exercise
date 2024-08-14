@@ -14,7 +14,7 @@ namespace UKParliament.CodeTest.WebApi.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetTodoList")]
+        [HttpGet(Name = "GetTodos")]
         public IEnumerable<TodoListModel> Get()
         {
             throw new NotImplementedException();

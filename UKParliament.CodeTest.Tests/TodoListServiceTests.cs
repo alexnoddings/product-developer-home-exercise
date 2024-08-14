@@ -1,6 +1,6 @@
 namespace UKParliament.CodeTest.Tests
 {
-    public class TodoListControllerTests
+    public class TodoListServiceTests
     {
         [Fact]
         public void Test1()
