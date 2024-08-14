@@ -31,8 +31,6 @@ The solution includes:
 
 ### Objective
 
-### Objective
-
 The goal of this task is to develop the back-end component of a simple to-do list management application. You will build a .NET Core Web API that allows users to perform CRUD (Create, Read, Update, Delete) operations on to-do items. 
 
 This task is focused **exclusively on back-end development**. You do **not** need to implement any front-end or user interface. Instead, think of this Web API as a component that would power a web front-end or a mobile application in a real-world scenario. The API you build should be flexible, well-structured, and adhere to RESTful conventions, making it easy for a front-end developer to consume.
@@ -83,7 +81,7 @@ Find the assessment criteria we will use to review your completed test below. Yo
 | Dependency inversion principle |  You should abstract any dependencies in your back-end code into interfaces, inject them using dependency injection, and mock them where required in unit tests. For example, the services should have an abstraction of the data access code injected rather than a concrete implementation. |
 |  Back-end |   
 |  Architecture | You should expand upon the N-tier skeleton structure setup in the test template. Data access should use the repository pattern, which injects your database context and interacts with it. The services then use the repository to read/save data. Api Controllers then consume these services. Services and controllers should not use the the database context directly. |
-|  Unit tests | Each class you add with public methods should have at least one unit test added to demonstrate how you would unit test that component. You should add at least one unit test for your controller(s) too.  |
-| RESTful conventions |  You should follow RESTful conventions for any endpoints you add into your application in terms of route URLs and HTTP verbs. And also return correct HTTP status codes for responses (for example, 404 when a to-do item isn't found). This includes supporting HTTP PUT and POST correctly when it comes to saving new to-do items or saving updates to existing items. |
+|  Unit tests | Each class you add with public methods should have at least one unit test added to demonstrate how you would unit test that component. Aim to create tests for the relevant service classses.  |
+| RESTful conventions |  You should follow RESTful conventions for any endpoints you add into your application in terms of route URLs and HTTP verbs. And also return correct HTTP status codes for responses (for example, 404 when a to-do item isn't found). |
 | Validation |   Validation should be added to check values provided for all fields are valid. This includes mandatory data fields. |
 |  Database & model | Entities and models should use appropriate types for the data they are storing. For example, a DateTime or DateOnly should be used for a due date, not a string. |
