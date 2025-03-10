@@ -6,7 +6,8 @@ namespace UKParliament.CodeTest.Services;
 // This implementation doesn't do any validation.
 // With the API being our only consumer currently, we assume that layer has performed sufficient validation.
 // It's also easier for that layer to translate validation failures into an HTTP response.
-// This layer could be expanded to inject validation and throw for invalid data.
+// This layer could be expanded to inject validation and throw for invalid data,
+// or use a Result-style pattern to avoid using exception for control flow.
 public class TodoListService : ITodoListService
 {
     private readonly ITodoListRepository _repository;

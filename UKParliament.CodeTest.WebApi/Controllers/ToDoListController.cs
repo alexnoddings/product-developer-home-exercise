@@ -55,6 +55,12 @@ public class ToDoListController : ControllerBase
     [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest)]
     public async Task<IResult> CreateAsync([FromBody] CreateTodoRequest request)
     {
+        // Manual validation is unnecessary boilerplate overhead.
+        // But FluentValidation doesn't recommend plumbing into aspnetcore's synchronous validation pipeline,
+        // and adding a custom validation middleware seems quite overkill for this task.
+        // But said middleware could act as an Endpoint Filter, scan the arguments for anything with eg [FromBody],
+        // then pull validation services and automatically return a ProblemDetails for any errors.
+        // That way, controller/endpoint methods could assume any model they're given has already been validated.
         var validationResult = await _createTodoValidator.ValidateAsync(request);
         if (!validationResult.IsValid)
         {
