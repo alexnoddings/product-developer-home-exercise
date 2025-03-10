@@ -38,6 +38,8 @@ public class TodoListRepository : ITodoListRepository
 
     public async Task<Guid> CreateAsync(TodoItem todo)
     {
+        ArgumentNullException.ThrowIfNull(todo);
+        
         _context.TodoItems.Add(todo);
         await _context.SaveChangesAsync();
 
