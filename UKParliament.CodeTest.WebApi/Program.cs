@@ -1,6 +1,8 @@
+using FluentValidation;
 using UKParliament.CodeTest.Data;
 using UKParliament.CodeTest.Services;
 using Microsoft.EntityFrameworkCore;
+using UKParliament.CodeTest.Services.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,8 @@ builder.Services.AddDbContext<TodoListContext>(op => op.UseInMemoryDatabase("Tod
 
 builder.Services.AddScoped<ITodoListService, TodoListService>();
 builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<CreateTodoRequest>();
 
 var app = builder.Build();
 
