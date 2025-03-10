@@ -41,6 +41,7 @@ public class ToDoListController : ControllerBase
         return Results.Ok(model);
     }
 
+    // This implementation exposes the service layer's todo model directly to the API rather than mapping since it's simple
     [HttpGet("", Name = "Get todos")]
     [ProducesResponseType<List<TodoModel>>(StatusCodes.Status200OK)]
     public async Task<IResult> GetAllAsync()

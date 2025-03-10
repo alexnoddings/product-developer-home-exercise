@@ -8,6 +8,7 @@ public class CreateTodoModel
     public string? Description { get; set; }
     public DateTime? DueDate { get; set; }
 
+    // Skip using a mapper since this is so simple.
     public TodoItem ToTodoItem() =>
         new() { 
             Title = Title, 

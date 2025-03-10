@@ -8,6 +8,7 @@ public class CreateTodoRequest
     public string? Description { get; set; }
     public DateTime? DueDate { get; set; }
 
+    // Mapping is done with an instanced method rather than mapping service for simplicity
     public CreateTodoModel ToModel() =>
         new() { 
             Title = Title, 
