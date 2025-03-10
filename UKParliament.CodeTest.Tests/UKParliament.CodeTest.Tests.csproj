@@ -15,6 +15,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="FakeItEasy" Version="8.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.7" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
     <PackageReference Include="xunit" Version="2.9.0" />
@@ -27,6 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UKParliament.CodeTest.Data\UKParliament.CodeTest.Data.csproj" />
     <ProjectReference Include="..\UKParliament.CodeTest.Services\UKParliament.CodeTest.Services.csproj" />
+    <ProjectReference Include="..\UKParliament.CodeTest.WebApi\UKParliament.CodeTest.WebApi.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -41,3 +41,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// Exposes the class publicly for the test library (the default is internal)
+public partial class Program;
