@@ -29,7 +29,9 @@ public class ToDoListController : ControllerBase
         _updateTodoValidator = updateTodoValidator;
     }
 
+    // Could use eg [EndpointSummary(...)], [EndpointDescription(...)] to add more OpenAPI-compliant info about these endpoints if for external consumption
     [HttpGet("{id:guid}", Name = "Get todo")]
+    // Describes what data/status codes the endpoints can return.
     [ProducesResponseType<TodoModel>(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IResult> GetByIdAsync([FromRoute] Guid id)
